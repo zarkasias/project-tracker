@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-display: Arial, Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", Menlo, Consolas, monospace;
+  --color-canvas: #09121d;
+  --color-surface: #172434;
+  --color-ink: #f1f5fb;
+  --color-muted: #b2c0d2;
+  --color-cobalt: #89b3ff;
+  --color-progress: #edc17d;
+  --color-done: #8fe1b4;
+  --color-danger: #ffc0cb;
+  --color-action: #3265d2;
+  --color-action-hover: #3b6cd8;
+  --color-action-edge: rgb(141 180 255 / 50%);
+  --color-focus: #a8caff;
+  --color-input: #101b27;
+  --color-glass-border: rgb(180 202 225 / 19%);
+  --color-error-edge: rgb(239 138 138 / 30%);
+  --color-error-surface: rgb(104 29 48 / 60%);
+  --color-error-text: #ffd2d9;
+  --radius-panel: 20px;
+  --blur-panel: 22px;
+  --shadow-glass:
+    inset 0 1px 0 rgb(255 255 255 / 5%), 0 16px 40px rgb(0 0 0 / 24%);
+  --background-image-glass: linear-gradient(
+    125deg,
+    rgb(55 72 92 / 76%),
+    rgb(17 27 38 / 90%)
+  );
+  --background-image-workspace:
+    linear-gradient(90deg, rgb(4 11 20 / 24%), rgb(4 11 20 / 12%)),
+    url("./assets/alpine-night-v4.png");
+}
+
+@layer base {
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-canvas);
+  }
+  button,
+  select {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 3px;
+  }
+}
+
+@layer base {
+  option {
+    color: var(--color-ink);
+    background: #142334;
+  }
+}
