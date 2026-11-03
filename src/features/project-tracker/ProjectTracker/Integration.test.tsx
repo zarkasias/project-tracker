@@ -5,7 +5,7 @@ import { TRACKER_STORAGE_KEY } from "../trackerStorage";
 import { isTrackerDocument } from "../validateTrackerDocument";
 import type { TrackerDocument } from "../projectTracker.types";
 
-import workloadFixture from "../../../../../../trials/project-tracker/validation/05-integration/workload.json";
+import workloadFixture from "./workload.fixture.json";
 
 const workload = (): TrackerDocument =>
   structuredClone(workloadFixture) as TrackerDocument;
